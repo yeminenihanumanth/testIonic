@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Profile Details </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- (click)="images(view)" -->
+  <ion-card class="cardView"
+   >
+
+    <ion-slides pager="true">
+      <ion-slide *ngFor="let imagesPath of profileDetail.imageUrls">
+        <img [src]="imagesPath" alt="images" class="prodImage">
+      </ion-slide>
+    </ion-slides>
+    <div class="contentText">
+      <ion-card-header>
+        <ion-card-title class="textClr">
+          {{profileDetail.name}}
+        </ion-card-title>
+        <ion-card-subtitle class="descri">     
+          <ion-text color="dark">
+            <p> {{profileDetail.language}}</p>
+          </ion-text>
+         
+        </ion-card-subtitle>
+      </ion-card-header>
+    </div>
+  </ion-card>
+</ion-content>

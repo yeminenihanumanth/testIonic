@@ -1,0 +1,71 @@
+ion-card {
+    margin: auto;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    height: 450px;
+  }
+  .my-width {
+      padding: 5px !important;
+      
+  }
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: fill;
+  }
+  .titleText {
+    color: #000;
+  }
+  .like {
+    font-weight: bold;
+    font-size: 12px;
+    padding-right: 6px;
+    padding-top: 16px;
+  }
+  .marR5 {
+    margin-right: 5px;
+  }
+  
+  .ratingView {
+    position: absolute;
+    right: 15px;
+    top: 45%;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 2px 5px;
+    color: #fff;
+  }
+  .backContent {
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 10%), 0px 1px 3px 0px rgb(0 0 0 / 8%);
+    // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(180,62,110,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(to right, rgb(0, 0, 70), rgb(28, 181, 224));
+  }
+  .contentText {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .cardCss {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    top: 50%;
+    margin: 0px;
+  }
+  .arrow {
+    position: absolute;
+    z-index: 99;
+    font-size: 2rem;
+    color: #fff;
+    right: 30px;
+    top: 30px;
+  }
+  .prodImage {
+    width: 100%;
+  }
+  
+  

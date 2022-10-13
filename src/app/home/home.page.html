@@ -1,0 +1,88 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding" (click)="recomenededProfiles()">Daily Recommendations</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>kerthi</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [scrollEvents]="true" [fullscreen]="true">
+
+    <div class="journey-container">
+      <div class="dashhdr paddb20">Your Journey So Far</div>
+      <ul id="dash-journey">
+
+        <li>
+          <div class="dashboard-bm-explore journey-2">
+            <p>6</p>
+            <!---->
+          </div>
+          <div class="bm-journey-label">Interests Received</div>
+        </li>
+        <!---->
+        <li>
+          <div class="dashboard-bm-explore journey-5">
+            <p>66</p>
+            <!---->
+          </div>
+          <div class="bm-journey-label">Viewed <br>Your Profile</div>
+        </li>
+        <!---->
+        <li>
+          <div class="dashboard-bm-explore journey-4">
+            <p>4</p>
+            <!---->
+          </div>
+          <div class="bm-journey-label">Shortlisted <br>You</div>
+        </li>
+      </ul>
+    </div>
+
+    <!--ion side Online Matches-->
+    <div ion-padding>
+      <div>
+        <h3 class="ion-padding ion-no-margin myMathces margin-cls"> Online Matches </h3>
+        <ion-slides [options]="sliderConfig">
+          <ion-slide class="slidersList" *ngFor="let pics of pics_List;let i = index">
+            <div>
+              <div (click)="navigateToDetails(pics)">
+                <img class="actorImgs" [src]="pics.imageUrls[0]" (click)="navigateToDetails(pics)" />
+                <div class="actorTitle">{{pics.name}}</div>
+              </div>
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+<!--ion side total Matches-->
+    <div ion-padding>
+      <h3 class="ion-padding ion-no-margin myMathces margin-cls"> 310 Total Matches
+         <ion-text class="float-right"></ion-text>
+      </h3>
+      <div class="profilePendding"> {{length}} Profile Pendding with me <span class="newProfile">{{length}} New</span>
+      </div>
+      <div >
+        <ion-slides [options]="sliderConfig">
+          <ion-slide class="slidersList" *ngFor="let pics of pics_List;let i = index">
+            <div >
+              <div>
+                <img class="actorImgs" [src]="pics.imageUrls[0]" (click)="navigateToDetails(pics)" />
+                <div class="actorTitle">{{pics.name}}</div>
+              </div>
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+
+  </ion-content>
+</div>
